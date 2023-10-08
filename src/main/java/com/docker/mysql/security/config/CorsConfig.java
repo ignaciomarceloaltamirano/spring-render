@@ -16,8 +16,9 @@ public class CorsConfig {
         public CorsFilter corsFilter() {
             UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
             CorsConfiguration corsConfig = new CorsConfiguration();
-            corsConfig.setAllowCredentials(true);
+//            corsConfig.setAllowCredentials(true);
             corsConfig.addAllowedOrigin("*");
+            corsConfig.addAllowedOrigin("http://localhost:5173");
             corsConfig.setAllowedHeaders(Arrays.asList(
                     HttpHeaders.AUTHORIZATION,
                     HttpHeaders.ACCEPT,
