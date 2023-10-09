@@ -24,7 +24,7 @@ public class CorsConfig {
                     HttpHeaders.AUTHORIZATION,
                     HttpHeaders.ACCEPT,
                     HttpHeaders.SET_COOKIE,
-                    HttpHeaders.CONTENT_TYPE,
+                    HttpHeaders.CONTENT_TYPE
             ));
             corsConfig.setAllowedMethods(Arrays.asList(
                     HttpMethod.HEAD.name(),
@@ -37,7 +37,7 @@ public class CorsConfig {
             ));
             corsConfig.setMaxAge(3600L);
             source.registerCorsConfiguration("/**", corsConfig);
-            FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
+            FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter());
             bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
             return bean;
         }
