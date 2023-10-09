@@ -19,7 +19,8 @@ public class CorsConfig {
             UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
             CorsConfiguration corsConfig = new CorsConfiguration();
             corsConfig.setAllowCredentials(true);
-            corsConfig.addAllowedOrigin("https://elegant-naiad-4aa2f3.netlify.app");
+//            corsConfig.addAllowedOrigin("https://elegant-naiad-4aa2f3.netlify.app");
+            corsConfig.addAllowedOrigin("*");
             corsConfig.setAllowedHeaders(Arrays.asList(
                     HttpHeaders.AUTHORIZATION,
                     HttpHeaders.ACCEPT,
